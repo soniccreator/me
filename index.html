@@ -2,11 +2,35 @@
 <html>
     <head>
         <title>About Vyom</title>
+        <style>
+		body {background-color: grey;}
+		h1   {color: blue;}
+		p    {color: red;}
+		div.div2    {
+			color: white; 
+			border: 2px solid powderblue;
+			
+			padding: 30px;
+			width: 80%;
+
+			}
+	</style>
+	
     </head>
     <body>
-        
+      
         <h2>About me:</h2>
-        <p>Hi, I'm Vyom, a 10-year-old sports enthusiast with a passion for living life to the fullest! 
-            When I'm not hitting aces on the tennis court, you can find me exploring the great outdoors and playing exciting games with friends. I'm also a bit of a tech whiz and love playing video games on my Nintendo Switch. But that's not all - I'm a strategic thinker too, and enjoy a good game of chess (thanks to my dad, who's a chess master!). My goals are to become a tennis star and excel in my studies. I'm excited to share my adventures and interests with you, so let's get started!</p>
+        <!--div id="div1">this part should change</div-->
+        
+        <div id="aboutMeText" class="div2"></div>
+        
+          <script>
+          
+          const calculateAge = (birthYear, birthMonth) => Math.floor((Date.now() - new Date(birthYear, birthMonth).getTime()) / 31557600000);
+		document.getElementById("aboutMeText").innerHTML =
+		"Hi, I'm Vyom, a "+calculateAge(2013, 10)+"-year-old sports enthusiast with a passion for living life to the fullest! When I'm not hitting aces on the tennis court, you can find me exploring the great outdoors and playing exciting games with friends. I'm also a bit of a tech whiz and love playing video games on my Nintendo Switch. But that's not all - I'm a strategic thinker too, and enjoy a good game of chess (thanks to my dad, who's a chess master!). My goals are to become a tennis star and excel in my studies. I'm excited to share my adventures and interests with you, so let's get started!"
+		
+		 
+	</script>
     </body>
 </html>
